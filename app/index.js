@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import SCSS from './assets/style.scss';
 import Layout from './components/Layout.js';
 

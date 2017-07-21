@@ -1,5 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  // box-sizing: 0;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
 
 body {
-  color:red;
   text-align: center;
+  font-family: sans-serif;
+}
+
+header {
+  margin: 50px 0;
+}
+
+input {
+  line-height: 20px;
+  border: 1px solid grey;
+  margin: 0 5px;
+  text-indent: 5px;
+}
+
+footer {
+  background: black;
+  color:white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
