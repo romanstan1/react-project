@@ -1,16 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SCSS from './assets/style.scss';
-import Layout from './components/Layout.js';
 
-ReactDOM.render(<Layout />, document.getElementById('app'));
+import HomeIndex from './components/home-page';
+import BattleIndex from './components/battle-page';
+import ItemsIndex from './components/items-page';
+import ItemsShow from './components/items-page/Show.js';
 
+import Nav from './components/Nav.js';
+import Footer from './components/Footer';
 
+ReactDOM.render(
+  <Router>
+    <div>
+    <Nav />
+     <Switch>
+      <Route exact path="/" component={HomeIndex} />
+      <Route exact path="/battle" component={BattleIndex} />
+      <Route exact path="/items" component={ItemsIndex} />
+      <Route exact path="/items/:show" component={ItemsShow} />
+      <Route render={() => <p> <br/><br/>404 error <br/><br/>Not Found</p>}/>
+     </Switch>
+     <Footer />
+    </div>
+  </Router>, document.getElementById('app') );
 
-
-
-// console.log(ReactDOM.render);
+// <Route path="/footer" component={Footer} />
 
 // console.log("It's on!");
 

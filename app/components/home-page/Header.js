@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Title from './header/Title';
+import Title from './Title';
 
 export default class Header extends React.Component {
 
@@ -11,13 +11,7 @@ export default class Header extends React.Component {
     };
   }
 
-  // handleChange(e) {
-  //   console.log('eeeee', e);
-  //   this.props.changeTitle(e);
-  // }
-
   render(){
-    console.log('this in header', this);
     return(
       <header>
         <Title title={this.props.title}/>

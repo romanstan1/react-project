@@ -9,7 +9,8 @@ module.exports = {
   entry: './index.js',
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     loaders: [
@@ -17,6 +18,9 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'], exclude: /node_modules/ }
     ]
+  },
+  devServer: {
+    historyApiFallback:true
   },
   plugins: [injectConfig]
 };
