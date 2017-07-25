@@ -7,6 +7,7 @@ import HomeIndex from './components/home-page';
 import BattleIndex from './components/battle-page';
 import ItemsIndex from './components/items-page';
 import ItemsShow from './components/items-page/Show.js';
+import AnotherShow from './components/items-page/AnotherShow.js';
 
 import Nav from './components/Nav.js';
 import Footer from './components/Footer';
@@ -19,7 +20,8 @@ ReactDOM.render(
       <Route exact path="/" component={HomeIndex} />
       <Route exact path="/battle" component={BattleIndex} />
       <Route exact path="/items" component={ItemsIndex} />
-      <Route exact path="/items/:show" component={ItemsShow} />
+      <Route exact path="/items/show" component={ItemsShow} />
+      <Route path="/items/:anothershow" component={AnotherShow} />
       <Route render={() => <p> <br/><br/>404 error <br/><br/>Not Found</p>}/>
      </Switch>
      <Footer />

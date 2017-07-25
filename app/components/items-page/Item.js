@@ -8,7 +8,7 @@ export default class ItemShow extends React.Component {
     return(
       <div className="item">
         <Link to={{
-          pathname: '/items/:show',
+          pathname: '/items/show',
           state: this.props
         }}>
 
